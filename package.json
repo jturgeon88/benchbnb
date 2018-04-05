@@ -22,7 +22,9 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
+    "start": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -34,5 +36,8 @@
   "bugs": {
     "url": "https://github.com/jturgeon88/benchbnb/issues"
   },
-  "homepage": "https://github.com/jturgeon88/benchbnb#readme"
+  "homepage": "https://github.com/jturgeon88/benchbnb#readme",
+  "devDependencies": {
+    "webpack-cli": "^2.0.14"
+  }
 }
