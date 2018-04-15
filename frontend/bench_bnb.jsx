@@ -5,7 +5,9 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 
+// Testing:
 import { login, signup, logout } from './actions/session_actions';
+import { fetchBenches } from './util/bench_api_util';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -24,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.logout = logout;
   // window.getState = store.getState;
   // window.dispatch = store.dispatch;
+  window.fetchBenches = fetchBenches;
   // <- TESTING PURPOSES
 
   const root = document.getElementById('root');
