@@ -7,7 +7,7 @@ import configureStore from './store/store';
 
 // Testing:
 import { login, signup, logout } from './actions/session_actions';
-import { fetchBenches } from './util/bench_api_util';
+import * as BenchActions from './actions/bench_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
@@ -24,9 +24,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // window.signup = signup;
   // window.login = login;
   // window.logout = logout;
-  // window.getState = store.getState;
-  // window.dispatch = store.dispatch;
-  window.fetchBenches = fetchBenches;
+  window.getState = store.getState;
+  window.dispatch = store.dispatch;
+  window.fetchBenches = BenchActions.fetchBenches;
   // <- TESTING PURPOSES
 
   const root = document.getElementById('root');
