@@ -8,9 +8,9 @@ export const receiveBenches = benches => ({
   benches,
 });
 
-
-export const fetchBenches = () => dispatch => (
-  APIUtil.fetchBenches().then(benches => (
+// Thunk action creator
+export const fetchBenches = (filters) => dispatch => (
+  APIUtil.fetchBenches(filters).then(benches => (
     dispatch(receiveBenches(benches))
   ))
 );
